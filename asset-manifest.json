@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Food-Survey-react-app/static/css/main.ce40a127.css",
+    "main.js": "/Food-Survey-react-app/static/js/main.90ac768e.js",
+    "index.html": "/Food-Survey-react-app/index.html",
+    "main.ce40a127.css.map": "/Food-Survey-react-app/static/css/main.ce40a127.css.map",
+    "main.90ac768e.js.map": "/Food-Survey-react-app/static/js/main.90ac768e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce40a127.css",
+    "static/js/main.90ac768e.js"
+  ]
+}
