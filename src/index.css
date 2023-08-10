@@ -1,13 +1,400 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Designing: */
+body {
+  background-color: black;
+}
+
+body::before {
+  content: "";
+  background: url("https://images.unsplash.com/photo-1541963020-4f9732b3ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z291cm1ldCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80") no-repeat center center/cover;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  opacity: 0.6;
+}
+
+/* Home Section */
+#home {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  padding-bottom: 90px;
+}
+
+/* Short head */
+.head {
+  width: 50rem;
+  margin: 10px 5px;
+  padding: 30px 5px;
+  text-shadow: 2px 2px 2px 1px black;
+}
+
+#title {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+#description {
+  font-family: "Outfit", sans-serif;
+  font-weight: 100;
+}
+
+/* Form */
+.container {
+  font-family: "Oswald", sans-serif;
+  background-color: black;
+  border: 2px solid rgb(255, 255, 255);
+  width: 40rem;
+  z-index: 0;
+  box-shadow: 1px 1px 20px 2px black;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#survey-form::before {
+  content: "";
+  background: url("https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80") no-repeat center center/cover;
+  position: absolute;
+  height: 1046px;
+  width: 40rem;
+  margin-left: -5px;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.form-group {
+  margin: 25px 25px;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+/* Input Areas */
+#name input,
+#email input,
+#number input,
+#dropdown {
+  padding: 10px;
+  border: white;
+  border-radius: 5px;
+  width: 36rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  resize: none;
+  width: 36rem;
+  padding: 10px;
+}
+
+.general {
+  text-align: left;
+}
+
+/* Footer */
+#foot {
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* Button */
+#submit {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(255, 255, 0);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 36rem;
+  margin-top: 2px;
+  margin-bottom: 25px;
+  padding: 6px 2px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(255, 196, 0);
+  box-shadow: 2px 2px 3px rgb(26, 26, 26);
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+
+  /* Short head */
+  .head {
+    width: 20rem;
+  }
+
+  #title {
+    font-size: 2rem;
+  }
+
+  .form-group p {
+    text-align: left;
+  }
+
+  #description {
+    font-size: 0.8rem;
+  }
+
+  /* Form */
+  .container {
+    width: 23rem;
+  }
+
+  #survey-form::before {
+    width: 23rem;
+  }
+
+  /* Input Areas */
+  #name input,
+  #email input,
+  #number input,
+  #dropdown {
+    width: 19rem;
+  }
+
+  textarea {
+    width: 19rem;
+  }
+
+  /* Footer */
+  #foot {
+    font-size: 0.8rem;
+  }
+
+  /* Buuton */
+  #submit {
+    width: 19rem;
+  }
+}
+
+/* Media Query */
+@media only screen and (max-width: 450px) {
+
+  /* Short head */
+  .head {
+    width: 15rem;
+  }
+
+  #title {
+    font-size: 1.3rem;
+  }
+
+  #description {
+    font-size: 0.6rem;
+  }
+
+  /* Form */
+  .container {
+    font-size: 1rem;
+    width: 18rem;
+  }
+
+  #survey-form {
+    align-items: flex-start;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  #survey-form::before {
+    width: 18rem;
+    margin-left: -3px;
+  }
+
+  /* Input Areas */
+  #name input,
+  #email input,
+  #number input,
+  #dropdown {
+    width: 235px;
+  }
+
+  textarea {
+    width: 235px;
+    height: 120px;
+  }
+
+  /* Footer */
+  #foot {
+    font-size: 0.7rem;
+  }
+
+  /* Button */
+  #submit {
+    width: 235px;
+  }
+}
+
+/* Media Query */
+@media only screen and (max-width: 390px) {
+
+  /* Home Section */
+  #home {
+    padding-bottom: 60px;
+  }
+
+  /* Short head */
+  .head {
+    width: 15rem;
+    margin: 1px;
+    padding: 10px 5px;
+  }
+
+  #title {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  #description {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+
+  /* Form */
+  .container {
+    width: 14rem;
+  }
+
+  #survey-form {
+    font-size: 0.9rem;
+    align-items: flex-start;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  #survey-form::before {
+    height: 997px;
+    width: 14rem;
+    margin-left: -2px;
+  }
+
+  /* Input Areas */
+  #name input,
+  #email input,
+  #number input,
+  #dropdown {
+    width: 170px;
+  }
+
+  textarea {
+    width: 170px;
+    height: 100px;
+  }
+
+  /* Footer */
+  #foot {
+    height: 40px;
+    font-size: 0.5rem;
+  }
+
+  /* Button */
+  #submit {
+    width: 170px;
+  }
+}
+
+/* Media Query */
+@media only screen and (max-width: 240px) {
+
+  /* Short head */
+  .head {
+    width: 12rem;
+    margin: 1px;
+    padding: 10px 5px;
+  }
+
+  #title {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  #description {
+    font-size: 0.5rem;
+  }
+
+  /* Form */
+  .container {
+    width: 10rem;
+  }
+
+  #survey-form {
+    font-size: 0.6rem;
+    align-items: flex-start;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  #survey-form::before {
+    height: 864px;
+    width: 10rem;
+  }
+
+  /* Input Areas */
+  #name input,
+  #email input,
+  #number input,
+  #dropdown {
+    font-size: 0.6rem;
+    height: 15px;
+    width: 105px;
+  }
+
+  textarea {
+    font-size: 0.6rem;
+    width: 105px;
+    height: 90px;
+  }
+
+  /* Footer */
+  #foot {
+    height: 40px;
+    font-size: 0.4rem;
+  }
+
+  /* Button */
+  #submit {
+    font-size: 0.7rem;
+    width: 105px;
+  }
 }
