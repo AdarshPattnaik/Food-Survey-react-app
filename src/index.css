@@ -110,6 +110,8 @@ label {
 }
 
 textarea {
+  background: white !important;
+  color: black !important;
   resize: none;
   width: 36rem;
   padding: 10px;
